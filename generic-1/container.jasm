@@ -1,0 +1,42 @@
+// Container<E>
+
+super public class Container
+	version 55:0
+{
+
+   // The interesting part of this is that despite it being "generic"
+   // It compiles down to Object. This is evident when you need to cast a generic
+   // and it failed, with the message: "java.lang.Object" cannot be cast to "whatever"
+   //
+   // For the most part, my assumption is that the IDE knows the restraints, and the
+   // generic behavior is somewhat along the lines of `instanceof`, especially when casted.
+
+
+   // private final E e;
+   private final Field e:"(Ljava/lang/Object;":"TE;";
+
+   // This is a the constructor Container#(Object)
+   public Method "<init>":"(Ljava/lang/Object;)V" 
+	stack 2 locals 2
+   {
+	aload_0;
+        // create the object
+	invokespecial	Method java/lang/Object."<init>":"V()";
+	aload_0;
+	aload_1;
+        // We assign Container#e to the constructor arg
+	// this.e = e;
+	putfield	Field e:"Ljava/lang/Object;";
+	return;
+   }
+
+   public Method get:"()Ljava/lang/Object;"
+   	stack 1 locals 1
+   {
+	aload_0;
+	// Get and return Container#e
+	getfield	Field e:"Ljava/lang/Object;";
+	return;
+   }
+
+}
