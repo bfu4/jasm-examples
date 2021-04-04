@@ -1,0 +1,83 @@
+printOptions=[LABS, DEBUG]
+CP len=23
+CP entry #1 + tagindex=10 tag=<Method> 
+CP entry #2 + tagindex=7 tag=<class> 
+CP entry #3 + tagindex=12 tag=<NameAndType> 
+CP entry #4 + tagindex=1 tag=<Asciz> 
+CP entry #5 + tagindex=1 tag=<Asciz> 
+CP entry #6 + tagindex=1 tag=<Asciz> 
+CP entry #7 + tagindex=9 tag=<Field> 
+CP entry #8 + tagindex=7 tag=<class> 
+CP entry #9 + tagindex=12 tag=<NameAndType> 
+CP entry #10 + tagindex=1 tag=<Asciz> 
+CP entry #11 + tagindex=1 tag=<Asciz> 
+CP entry #12 + tagindex=1 tag=<Asciz> 
+CP entry #13 + tagindex=1 tag=<Asciz> 
+CP entry #14 + tagindex=1 tag=<Asciz> 
+CP entry #15 + tagindex=1 tag=<Asciz> 
+CP entry #16 + tagindex=1 tag=<Asciz> 
+CP entry #17 + tagindex=1 tag=<Asciz> 
+CP entry #18 + tagindex=1 tag=<Asciz> 
+CP entry #19 + tagindex=1 tag=<Asciz> 
+CP entry #20 + tagindex=1 tag=<Asciz> 
+CP entry #21 + tagindex=7 tag=<class> 
+CP entry #22 + tagindex=1 tag=<Asciz> 
+access=33 public  this_cpx=8 super_cpx=2
+numinterfaces=0
+nfields=1
+  FieldData: #0
+FieldData - Attributes[0]
+		FieldData: name[11]=identifier type[12]=I
+nmethods=2
+  MethodData: #0
+		MethodData: {modifiers}: public
+		      MethodData: name[5]=<init> sig[13]=(I)V
+MethodData - Attributes[1]
+   #0 name[14]="Code"
+			CodeAttr:  Codelen=10 fulllen=42 max_stack=2 max_locals=2
+			CodeAttr:  TrapTable[0]
+			CodeAttr: add.attr:1
+			CodeAttr:  attr: LineNumberTable
+			CodeAttr:  LineNumTable[3] len=14
+  MethodData: #1
+		MethodData: {modifiers}: public
+		      MethodData: name[16]=getIdentifier sig[17]=()I
+MethodData - Attributes[1]
+   #0 name[14]="Code"
+			CodeAttr:  Codelen=5 fulllen=29 max_stack=1 max_locals=1
+			CodeAttr:  TrapTable[0]
+			CodeAttr: add.attr:1
+			CodeAttr:  attr: LineNumberTable
+			CodeAttr:  LineNumTable[1] len=6
+ClassData - Attributes[2]
+   #0 name[18]="SourceFile"
+   #1 name[20]="PermittedSubclasses"
+AttrData:#20 len=4
+
+<< Reading is done >>
+
+
+super public class SealedClass
+	version 61:65535
+{
+  protected final Field identifier:I;
+
+  public Method "<init>":"(I)V"
+	stack 2 locals 2
+  {
+		aload_0;
+		invokespecial	Method java/lang/Object."<init>":"()V";
+		aload_0;
+		iload_1;
+		putfield	Field identifier:"I";
+		return;
+  }
+  public Method getIdentifier:"()I"
+	stack 1 locals 1
+  {
+		aload_0;
+		getfield	Field identifier:"I";
+		ireturn;
+  }
+
+} // end Class SealedClass
