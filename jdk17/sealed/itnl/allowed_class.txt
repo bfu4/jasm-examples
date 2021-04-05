@@ -1,0 +1,73 @@
+printOptions=[CP, LNT, PC, LABS, CPX, SRC, VAR, DEBUG]
+CP len=16
+CP entry #1 + tagindex=10 tag=<Method> 
+CP entry #2 + tagindex=7 tag=<class> 
+CP entry #3 + tagindex=12 tag=<NameAndType> 
+CP entry #4 + tagindex=1 tag=<Asciz> 
+CP entry #5 + tagindex=1 tag=<Asciz> 
+CP entry #6 + tagindex=1 tag=<Asciz> 
+CP entry #7 + tagindex=7 tag=<class> 
+CP entry #8 + tagindex=1 tag=<Asciz> 
+CP entry #9 + tagindex=1 tag=<Asciz> 
+CP entry #10 + tagindex=1 tag=<Asciz> 
+CP entry #11 + tagindex=1 tag=<Asciz> 
+CP entry #12 + tagindex=1 tag=<Asciz> 
+CP entry #13 + tagindex=1 tag=<Asciz> 
+CP entry #14 + tagindex=1 tag=<Asciz> 
+CP entry #15 + tagindex=1 tag=<Asciz> 
+access=33 public  this_cpx=7 super_cpx=2
+numinterfaces=0
+nfields=0
+nmethods=2
+  MethodData: #0
+		MethodData: {modifiers}: public
+		      MethodData: name[5]=<init> sig[9]=()V
+MethodData - Attributes[1]
+   #0 name[10]="Code"
+			CodeAttr:  Codelen=7 fulllen=35 max_stack=2 max_locals=1
+			CodeAttr:  TrapTable[0]
+			CodeAttr: add.attr:1
+			CodeAttr:  attr: LineNumberTable
+			CodeAttr:  LineNumTable[2] len=10
+  MethodData: #1
+		MethodData: {modifiers}: public native
+		      MethodData: name[12]=asSealedInst sig[13]=()LSealedClass;
+MethodData - Attributes[0]
+ClassData - Attributes[1]
+   #0 name[14]="SourceFile"
+
+<< Reading is done >>
+
+
+super public 	#7 //class AllowedClass
+	extends 	#2 //class SealedClass
+	version 61:65535
+{
+	const #1 = Method	#2.#3;	//  SealedClass."<init>":"(I)V"
+	const #2 = class	#4;	//  SealedClass
+	const #3 = NameAndType	#5:#6;	//  "<init>":"(I)V"
+	const #4 = Asciz	"SealedClass";
+	const #5 = Asciz	"<init>";
+	const #6 = Asciz	"(I)V";
+	const #7 = class	#8;	//  AllowedClass
+	const #8 = Asciz	"AllowedClass";
+	const #9 = Asciz	"()V";
+	const #10 = Asciz	"Code";
+	const #11 = Asciz	"LineNumberTable";
+	const #12 = Asciz	"asSealedInst";
+	const #13 = Asciz	"()LSealedClass;";
+	const #14 = Asciz	"SourceFile";
+	const #15 = Asciz	"AllowedClass.java";
+  public Method #5:#9	 // "<init>":"()V"
+	stack 2 locals 1
+  {
+// 5: 		super(10);
+	0:	aload_0;
+	1:	bipush	10;
+	3:	invokespecial	#1; //	Method SealedClass."<init>":"(I)V";
+// 6: 	}
+	6:	return;
+  }
+  public native Method #12:#13;	 // asSealedInst:"()LSealedClass;"
+
+} // end Class AllowedClass compiled from "AllowedClass.java"
